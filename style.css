@@ -1,0 +1,335 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    
+}
+html{
+    scrollbar-color: rgb(57, 57, 57) rgb(35, 35, 35);
+}
+
+body{
+    background-color: rgb(0, 0, 0);
+    position: relative;
+    overflow-x: hidden;
+    scrollbar-color: rgba(0, 0, 0, 0.3) rgba(0, 0, 0, 0.5);
+}
+
+        ::-webkit-scrollbar{
+            width: .5rem;
+        }
+        ::-webkit-scrollbar-track{
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+        ::-webkit-scrollbar-thumb{
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+/* HEADER */
+
+header{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(img/aprilupdate.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: inset 0px 0px 1rem 1rem black;
+}
+    header .container{
+        font-family: 'Wix Madefor Display', sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: white;
+        justify-content: center;
+        height: 90vh;
+    }
+        header .container h1{
+            text-align: center;
+            font-family: 'Oswald', sans-serif;
+            font-size: 3rem;
+            letter-spacing: .1rem;
+            font-weight: bold;
+            padding: 1.5rem;
+            text-transform: uppercase;
+        }
+        header .container p{
+            font-size: 24px;
+            font-weight: lighter;
+            text-align: center;
+        }
+        header .container .btn{
+            margin: 30px auto 0;
+            background-color: rgba(0,0,0,0.1);
+            border: none;
+        }
+        header .container .btn a{
+            font-family: 'Wix Madefor Display', sans-serif;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 1rem;
+            width: 10rem;
+            text-decoration: none;
+            display: inline-block;
+            padding: 1rem 0;
+            color: #fff;
+            border: 1px solid #fff;
+            position:relative;
+            z-index: 1;
+            transition: color 1s;
+        }
+        header .container .btn a span{
+            width: 0;
+            background-color: white;
+            height: 100%;
+            z-index: -1;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: 1s;
+        }
+        header .container .btn a:hover{
+            color: black;
+        }
+        header .container .btn a:hover span{
+            width: 100%;
+        }
+    header #header-nav{
+        z-index: 2;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        display: flex;
+        height: 4rem;
+        justify-content: flex-end;
+        align-items: center;
+        padding-right: 2rem;
+        gap: 2rem;
+        border-bottom: 1px solid black;
+        background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.2));
+    }
+        header #header-nav ul{
+            display: flex;
+            gap: 1.5rem;
+        }
+        header #header-nav img{
+            height: 3rem;
+        }
+        header #header-nav ul li{
+            list-style: none;
+            font-family: 'Wix Madefor Display', sans-serif;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        header #header-nav ul li a{
+            color: rgb(185, 172, 148);
+            text-shadow: 2px 2px 4px #000000;
+            transition: color .4s ease-in;
+            cursor: pointer;
+        }
+        header #header-nav ul li a:hover{
+            color: rgb(240, 229, 210);
+            text-shadow: 2px 2px 6px #585858;
+        }
+        header #header-nav #nav-btn{
+            display: none;
+        }
+
+        @media (max-width: 700px){
+            header .container h1{
+                font-size: 2rem;
+            }
+            header .container p{
+                font-size: 1rem;
+            }
+            header #header-nav{
+            justify-content: flex-start;
+            padding: 3rem 0 1rem 0;
+            flex-direction: column;
+            width: 300px;
+            height: 100vh;
+            position: fixed;
+            right: -300px;
+            top:0;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.5));
+            transition: 1s;
+            }
+            header #header-nav ul{
+                flex-direction: column;
+            }
+            header #header-nav #nav-btn{
+                background: rgba(0,0,0,0.7);
+                display: block;
+                width: 30px;
+                height: 30px;
+                text-align: center;
+                position: fixed;
+                right: 20px;
+                top: 15px;
+                z-index: 3;
+                cursor: pointer;
+                box-shadow: 0px 0px 20px 8px black;
+            }
+        }
+        /* DIALOG */
+        .dialog{
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.4));
+            position: fixed;
+            padding: 1rem;
+            align-items: center;
+            text-align: center;
+            min-width: 40rem;
+            max-width: 50vw;
+            height: 45vh;
+            margin: auto;
+            
+        }
+            .dialog::backdrop{
+                background: linear-gradient(45deg, rgb(82, 55, 39), rgb(86, 23, 23));
+                opacity: .5;
+            }
+       .dialog h1{
+                margin: 2rem 1rem 1rem 0;
+                font-size:3rem;
+                color: white;
+       } 
+       .dialog p{
+            color:rgb(240, 229, 210);;
+            font-size: 2rem;
+       }
+       .close-dialog{
+        background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.3));
+        color: white;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        width: 40px;
+        height: 40px;
+        border: none;
+        cursor: pointer;
+       
+       }
+            .dialog a{
+                text-decoration: none;
+			color: inherit;
+			position: relative;
+            }
+                .dialog a:hover{
+                    color: rgb(86, 23, 23)
+                }
+                .dialog a::after{
+                content: "";
+				position: absolute;
+				left:0;
+				bottom:0;
+				width:100%;
+				height:1px;
+				background: currentColor;
+				transform: scaleX(0.2);
+                transition: 300ms ease-in;
+                }
+                .dialog a:hover::after{
+                    transform: scaleX(1);
+				    
+                }
+        @media (max-width: 700px){
+            .dialog{
+                min-width: 18rem;
+                max-height: 20rem;
+            }
+            .dialog h1{
+                font-size: 2rem;
+            }
+            .dialog p{
+                font-size: 1rem;
+            }
+        }
+       
+      
+
+        /* OPOWIESC */
+
+        .story{
+            background-color: rgb(64, 18, 18);
+        }
+        .story-section{
+            display: flex;
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.1));
+            height: 60rem;
+        }
+               
+            .story-section .story-content{
+                display: flex; 
+                flex-direction: column;
+                align-items: center;
+                box-shadow: inset 0px 0px 4rem 1.5rem black;
+                width: 100vw;
+            }
+            .story-section .story-content h1{
+                text-transform: uppercase;
+                text-align: center;
+                padding: 5rem 0 1rem;
+                font-family: 'Oswald', sans-serif;
+                font-size: 3rem;
+                color: rgb(82, 55, 39);
+                text-shadow: 4px 4px 8px #000000;
+            }
+            .story-section .story-content p{
+                padding: 0 2rem 2rem;
+                width: 32rem;
+                font-family: 'Wix Madefor Display', sans-serif;
+                font-size: 1.25rem;
+                color: rgb(185, 172, 148);
+                text-shadow: 6px 6px .5rem #000000;
+                letter-spacing: .075rem;
+            }
+                .story-section .story-content p:last-child{
+                    padding: 0 2 5rem;
+                }
+        .story-section .img-container{
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(img/monster.png);
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            box-shadow: inset 0px 0px 4rem 1.5rem black;
+            width: 100%;
+            height: 100%;
+            padding: 3rem;
+        }
+                    @media (max-width: 1000px){
+                        .story-section{
+                            flex-direction: column;
+                            height: 100rem;
+                        }
+                    }
+                    @media (max-width: 500px){
+                        .story-section{
+                            height: 75rem;
+                        }
+                        .story-section .story-content h1{
+                            font-size: 2rem;
+                        }
+                        .story-section .story-content p{
+                            width: 20rem;
+                            letter-spacing: .05rem;
+                            font-size: 1rem;
+                        }
+                    }
+
+
+/* FOOTER */
+
+footer{
+    height: 10rem;
+    background-color: rgb(48, 12, 12);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: inset 0px 0px 4rem 1.5rem black;
+}
