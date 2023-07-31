@@ -22,8 +22,7 @@ function UrlChanged(){
       }else{
          $element.classList.remove("section-is-hidden");
          $element.classList.remove("section-is-single");
-         $element.querySelector(".przedstawienie-bossa-unactive").classList.remove("hidden");
-         $element.querySelector(".przedstawienie-bossa-active").classList.add("hidden");
+         
       }
          
         
