@@ -1,0 +1,324 @@
+header .container .btn a span{
+    transition: .75s;
+}
+
+
+header{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url("../img/ghadira2.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: inset 0px 0px 3em 1em black;
+}
+
+main{
+    background: linear-gradient(90deg, rgba(0,0,0,0.1), rgba(0,0,0,0.9)), url("../img/keyarttlo.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 1em;
+}
+.bossy{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+
+.przedstawienie-bossa-unactive{
+    position: relative;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1em 0 0 0;
+    margin: 1em;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
+    width: 23em;
+    height:30em;
+}
+@media (max-width: 375px){
+    .przedstawienie-bossa-unactive{
+        transform: scale(.7);
+    }
+}
+.przedstawienie-bossa-unactive h2{
+    color: white;
+    text-transform: uppercase;
+}
+.przedstawienie-bossa-unactive .boss-img{
+    min-height: 22em;
+}
+.przedstawienie-bossa-unactive img{
+    object-fit: contain;
+}
+.przedstawienie-bossa-unactive a{
+    text-align: center;
+    background-color: inherit;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: .5s;
+    min-height: 2.5em;
+    position: relative;
+}
+.przedstawienie-bossa-unactive a:hover{
+    background-color: rgba(36, 36, 36,0.7);
+}
+.przedstawienie-bossa-unactive a::after{
+    position: absolute;
+    content: '';
+    left: 50%;
+    bottom: 20%;
+    margin-left: -10px;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid white;
+    
+}
+@keyframes arrow{
+    0% {bottom: 30%}
+    50% {bottom: 25%}
+    100% {bottom: 20%}
+}
+
+.przedstawienie-bossa-unactive a:hover::after{
+    animation-name: arrow;
+    animation-duration: .4s;
+    animation-iteration-count: infinite;
+    animation-timing-function:linear;
+    animation-direction: alternate-reverse;
+}
+
+
+.section-is-single{
+    width: 100vw;
+}
+   
+
+.przedstawienie-bossa-active{
+    position: relative;
+    text-align: center;
+    display: flex;
+    padding: 1em 0 0 0;
+    margin: 0 2.5em;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)); 
+    height: auto;
+    min-height: 37em;
+    color: white;
+    font-family: 'Wix Madefor Display', sans-serif;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+@media (max-width: 900px){
+    .przedstawienie-bossa-active{
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        margin: 0 1em;
+    }
+}
+.przedstawienie-bossa-active a{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 0;
+    top: 30px;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-top: 25px solid white;
+    transform: rotate(90deg);
+    cursor: pointer;
+
+}
+@keyframes arrow-active{
+    0% {left: 1%}
+    25% {left: .75%}
+    50% {left: .5%}
+    75% {left: .25%}
+    100% {left: 0}
+}
+
+.przedstawienie-bossa-active a:hover{
+    position: absolute;
+    cursor: pointer;
+    animation-name: arrow-active;
+    animation-duration: .7s;
+    animation-iteration-count: infinite;
+    animation-timing-function:linear;
+    animation-direction: alternate-reverse;
+}
+
+
+    .przedstawienie-bossa-active .info{
+        /* background-color: red; */
+    width: 50em;
+    min-width: 15em;
+    }
+    @media (max-width: 900px){
+        .przedstawienie-bossa-active .info{
+            width: 95vw;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            height: 15em;
+        }
+        .przedstawienie-bossa-active .info .boss-img{
+            transform: scale(0.7);
+            
+        }
+    }
+    @media (max-width: 710px){
+        .przedstawienie-bossa-active .info{
+            justify-content: center;
+        }
+        .przedstawienie-bossa-active .info h1, .statystyki{
+            transform: scale(0.7);
+            padding-right: .5em;
+        }
+        .przedstawienie-bossa-active .info .boss-img{
+            width: 10em;
+        }
+    }
+    @media (max-width: 550px){
+        .przedstawienie-bossa-active .info{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 7.5em 7.5em;
+        }
+        .przedstawienie-bossa-active .info .boss-img{
+            grid-row-start: 1;
+            grid-row-end: 3;
+        }
+        .przedstawienie-bossa-active .info .boss-img{
+            transform: scale(.5);
+        }
+    }
+    .przedstawienie-bossa-active .info h1{
+        font-family: 'Oswald', sans-serif;
+        letter-spacing: 1.5px;
+        font-size: 3rem;
+        color: rgb(255, 255, 255);
+        text-shadow: 4px 4px 8px #a5a5a5;
+    }
+    .przedstawienie-bossa-active .info .statystyki{
+        margin: 1em 0;
+        height: 10em;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        align-items: center;
+    }
+    .przedstawienie-bossa-active .info .statystyki span{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        gap: 1.5em;
+    }
+    .przedstawienie-bossa-active .info .statystyki img{
+        width: 35px;
+        height: 35px;
+        
+    }
+
+
+    .przedstawienie-bossa-active .info-cd{
+        /* background-color: blue; */
+        width: 100%;
+        padding: 1.5em;
+    }
+    @media (max-width: 900px){
+        .przedstawienie-bossa-active .info-cd{
+            width: 95vw;
+        }
+    }
+    .przedstawienie-bossa-active .info-cd .drop{
+        display: flex;
+        justify-content: space-around;
+        padding-bottom: 1.5em;
+    }
+        @media (max-width: 1320px){
+            .przedstawienie-bossa-active .info-cd .drop{
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 1.5em;
+            }
+        }
+    .przedstawienie-bossa-active .info-cd .drop li{
+        font-size: 1.25em;
+        list-style: none;
+        color: rgb(50, 138, 32);
+    }
+    @media (max-width: 900px){
+        .przedstawienie-bossa-active .info-cd .drop li{
+            font-size: 1em;
+        }
+    }
+    .przedstawienie-bossa-active .info-cd .drop .synergetyki{
+        color: rgb(182, 2, 2);
+    }
+    .przedstawienie-bossa-active .info-cd .drop li span{
+        color: white;
+    }
+    .przedstawienie-bossa-active .info-cd h3{
+        font-size: 1.5em;
+        padding-bottom: 1em;
+    }
+
+    .przedstawienie-bossa-active .info-cd .atak{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 100%;
+        gap: 2em;
+        padding-bottom: 1em;
+    }
+    .przedstawienie-bossa-active .info-cd .atak li{
+        list-style: none;
+        display: flex;
+        align-items: center;
+        gap: .5em;
+    }
+        .przedstawienie-bossa-active .info-cd .atak .fiz-szary{
+            text-shadow: 0 7px 7px rgb(100, 100, 100);
+        }
+        .przedstawienie-bossa-active .info-cd .atak .dyst-braz{
+            text-shadow: 0 7px 7px rgb(105, 47, 0);
+        }
+        .przedstawienie-bossa-active .info-cd .atak .urok-fiol{
+            text-shadow: 0 7px 7px rgb(173,12,208);
+        }
+    .przedstawienie-bossa-active .info-cd .atak li img{
+        width: 40px;
+        height: 40px;
+    }
+
+    .przedstawienie-bossa-active .info-cd .umiejetnosci, .druzyna{
+        padding-bottom: 1em;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 2em;
+    }
+    .przedstawienie-bossa-active .info-cd .umiejetnosci li , .druzyna li{
+        list-style: none;
+        color: rgb(239, 221, 188);
+    }
+    .przedstawienie-bossa-active .info-cd .druzyna li img{
+        width: 150px;
+        height: 150px;
+    }
+    
+
+
+.hidden {
+display: none;
+}
+.section-is-hidden{
+    display: none;
+}

@@ -288,7 +288,7 @@ header{
                 letter-spacing: .075rem;
             }
                 .story-section .story-content p:last-child{
-                    padding: 0 2 5rem;
+                    padding: 0 2em 5em;
                 }
         .story-section .img-container{
             background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(img/monster.png);

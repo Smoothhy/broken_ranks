@@ -16,10 +16,10 @@
         header_nav_btn.onclick = () =>{
             if(header_nav.style.right == "0px"){
                 header_nav.style.right = "-300px";
-                header_nav_btn.src = "img/menu.png";
+                header_nav_btn.src = "../img/menu.png";
             } else{
                 header_nav.style.right = "0px";
-                header_nav_btn.src = "img/close.png";
+                header_nav_btn.src = "../img/close.png";
             }
 
         }
@@ -29,9 +29,8 @@
     const OpenDialog = []
 
             OpenDialog[0] = document.querySelector(".synergi");
-            OpenDialog[1] = document.querySelector(".bossy");
-            OpenDialog[2] = document.querySelector(".czempiony");
-            OpenDialog[3] = document.querySelector(".sety");
+            OpenDialog[1] = document.querySelector(".czempiony");
+            OpenDialog[2] = document.querySelector(".sety");
             
             const CloseDialog = document.querySelector(".close-dialog");
             const Dialog = document.querySelector(".dialog");
