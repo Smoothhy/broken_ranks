@@ -16,10 +16,10 @@
         header_nav_btn.onclick = () =>{
             if(header_nav.style.right == "0px"){
                 header_nav.style.right = "-300px";
-                header_nav_btn.src = "../img/menu.png";
+                header_nav_btn.src = "img/menu.png";
             } else{
                 header_nav.style.right = "0px";
-                header_nav_btn.src = "../img/close.png";
+                header_nav_btn.src = "img/close.png";
             }
 
         }

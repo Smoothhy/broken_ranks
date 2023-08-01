@@ -239,13 +239,14 @@ main{
     .przedstawienie-bossa-active .info-cd .drop{
         display: flex;
         justify-content: space-around;
+        flex-wrap: wrap;
         padding-bottom: 1.5em;
+        gap: 1.5em;
     }
         @media (max-width: 1320px){
             .przedstawienie-bossa-active .info-cd .drop{
                 justify-content: center;
                 flex-wrap: wrap;
-                gap: 1.5em;
             }
         }
     .przedstawienie-bossa-active .info-cd .drop li{
@@ -260,6 +261,12 @@ main{
     }
     .przedstawienie-bossa-active .info-cd .drop .synergetyki{
         color: rgb(182, 2, 2);
+    }
+    .przedstawienie-bossa-active .info-cd .drop .rzecz{
+        color:rgb(100, 100, 100);
+    }
+    .przedstawienie-bossa-active .info-cd .drop .epiki{
+        color: rgb(253, 206, 0);
     }
     .przedstawienie-bossa-active .info-cd .drop li span{
         color: white;

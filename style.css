@@ -327,7 +327,7 @@ header{
 
 footer{
     height: 10rem;
-    background-color: rgb(48, 12, 12);
+    background-color: rgb(17, 17, 17);
     color: white;
     display: flex;
     flex-direction: column;
